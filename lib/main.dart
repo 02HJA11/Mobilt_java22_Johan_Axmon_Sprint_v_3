@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:translate/pages/home_page.dart';
-import 'package:translate/pages/translate_page.dart';
+import 'package:translate/pages/translate_english.dart';
+
 import 'package:translate/pages/history_page.dart';
 import 'firebase_options.dart';
 
@@ -58,9 +59,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
-        '/translate': (context) => const TranslatePage(),
+        '/translate': (context) =>  translate_english(),
         '/history': (context) => const HistoryPage(),
       },
     );
   }
 }
+
